@@ -33,8 +33,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // wiring of each half
 #define MATRIX_ROW_PINS { D4, D7, E6, B4, B5 }
-#define MATRIX_COL_PINS { F5, F6, F7, B1, B3, B2, B6 }
-// #define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6, F5} //uncomment this line and comment line above if you need to reverse left-to-right key order
+// #define MATRIX_COL_PINS { F5, F6, F7, B1, B3, B2, B6 }
+#define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6, F5} //uncomment this line and comment line above if you need to reverse left-to-right key order
+
+// FOR RUAN
+// Use this if you need to flash the Pololu A-star micro controller (i.e. the right hand side).
+// You would NOT NEED TO EVER DO THIS AGAIN since we will be flashing the keymaps to the
+// pro-micro (left hand side)
+// #define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6, B7} 
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
@@ -49,7 +55,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEBOUNCE 5
 
 /* serial.c configuration for split keyboard */
-#define SOFT_SERIAL_PIN D0
+// FOR RUAN 
+// Andrew's keyboard uses D0. Ruans uses D2 which is the more correct one since it is marked as the Rx pin.
+#define SOFT_SERIAL_PIN D2
+// #define SOFT_SERIAL_PIN D0
 
 #define SPLIT_USB_DETECT
 
