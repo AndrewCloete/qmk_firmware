@@ -58,7 +58,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // FOR RUAN 
 // Andrew's keyboard uses D0. Ruans uses D2 which is the more correct one since it is marked as the Rx pin.
 // #define SOFT_SERIAL_PIN D2
-#define SOFT_SERIAL_PIN D0
+#define SOFT_SERIAL_PIN D1
 
 #define SPLIT_USB_DETECT
 
