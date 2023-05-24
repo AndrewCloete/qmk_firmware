@@ -14,7 +14,8 @@ enum custom_keycodes {
   SYMB,
   NAV,
   ADJUST,
-  KC_WIN_TAB
+  KC_WIN_TAB,
+  MACRO_PTT
 };
 
 // Shortcut to make keymap more readable
@@ -70,6 +71,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 unregister_code(KC_LWIN);
             }
             break;
+        case MACRO_PTT:
+            // See https://docs.qmk.fm/#/feature_macros?id=send_string-amp-process_record_user
+            if (record->event.pressed) {
+                SEND_STRING(SS_LWIN("5") SS_LCTL("d"));
+            } 
+            break;
     }
     return true;
 }
@@ -81,9 +88,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_NAGR ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,                                            KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_NAMI ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_TAB  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T    ,XXXXXXX   ,                          SYM_A   ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P  , KC_EQL,
+     KC_TAB  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T    , MACRO_PTT,                          SYM_A  ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P  , KC_EQL,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_NAESC ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,KC_LBRC ,                          KC_RBRC ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_SCLN ,KC_QUOT ,
+     KC_NAESC ,KC_A    ,KC_S    ,KC_D    ,KC_F   ,KC_G    ,KC_LBRC ,                          KC_RBRC ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_SCLN ,KC_QUOT ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      SYM_L   ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B   ,C(KC_LWIN),SYM_L ,        KC_HOME ,KC_ADEN ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH , KC_CTPL ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
