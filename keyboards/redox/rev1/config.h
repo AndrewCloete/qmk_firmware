@@ -56,9 +56,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* serial.c configuration for split keyboard */
 // FOR RUAN 
-// Andrew's keyboard Redox uses D1 and the slim-redox uses D0. Ruans uses D2 which is the more correct one since it is marked as the Rx pin.
-// #define SOFT_SERIAL_PIN D2
+// Andrew's keyboard Redox uses D1 and the slim-redox uses D1. Ruans uses D2 which is the more correct one since it is marked as the Rx pin.
 #define SOFT_SERIAL_PIN D1
+// #define SOFT_SERIAL_PIN D1
 
 #define SPLIT_USB_DETECT
 
