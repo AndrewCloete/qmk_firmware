@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      XXXXXXX ,KC_WBAK ,KC_WFWD ,KC_LCBR ,KC_RCBR ,XXXXXXX ,_______ ,                          _______ ,KC_HOME ,KC_PGDN ,KC_PGUP ,KC_WFAV ,KC_END  ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     XXXXXXX ,KC_LALT, KC_PSCR ,KC_LPRN ,KC_RPRN ,XXXXXXX ,_______ ,                          _______ ,KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RIGHT,KC_BTN3 ,XXXXXXX ,
+     XXXXXXX ,KC_LALT, KC_PSCR ,KC_LPRN ,KC_RPRN ,KC_UNDS ,_______ ,                          _______ ,KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RIGHT,KC_BTN3 ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      SYM_A   ,XXXXXXX ,KC_DEL  ,KC_LBRC ,KC_RBRC ,XXXXXXX ,_______ ,_______ ,        KC_PGUP ,KC_PGDN ,KC_WH_L ,KC_WH_D ,KC_WH_U ,KC_WH_R ,XXXXXXX ,XXXXXXX ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
